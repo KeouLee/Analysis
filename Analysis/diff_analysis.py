@@ -1,0 +1,3 @@
+
+class DiffAnalysis:
+    pass
