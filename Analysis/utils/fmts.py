@@ -3,23 +3,26 @@ import numpy as np
 import re
 import os
 from monty.io import reverse_readfile
-from Analysis.data.periodic import chemical_symbols
+#from Analysis.data.periodic import chemical_symbols
 
 def dict_pretty(d, file_name):
     with open(file_name, 'a') as f:
        f.write(f"#{time.ctime()}\n")
        for k, v in d.items():
            f.write(f"{k}\t\t{v}\n")
-    
-def WriteToXyz(coords, atom_lt, file_name):
+
+def WriteToXyz(coords, atom_lt, cmt, file_name):
     FrameNum = coords.shape[0]
     AtomNum = len(atom_lt)
+    assert cmt[-1] == '\n'
 
     if os.path.exists(file_name):
         os.remove(file_name)
+    print('writing to xyz file...')
     with open(file_name, 'a') as f:
         for i in range(FrameNum):
-            f.write(f'  {AtomNum}\n\n')
+            f.write(f'  {AtomNum}\n')
+            f.write(cmt)
             for j in range(AtomNum):
                 c = str(coords[i][j]).strip("[] ")
                 f.write(f' {atom_lt[j]}  ')
@@ -31,7 +34,9 @@ def cond_text2dict(fn):
     f=reverse_readfile(fn)
     data={}
     for line in f:
-        if (mo:=re.match(r'TIME\s+([\.\d]+)',line)):
+        if (mo:=re.match(r'RUN_TYEP\s+(\w+)',line)):
+            data['run_t']=mo.group(1)
+        elif (mo:=re.match(r'TIME\s+([\.\d]+)',line)):
             data['TIME'] = float(mo.group(1))
         elif (mo:=re.match(r'temperature\s+(\d+)', line)):
             data['T']=int(mo.group(1))

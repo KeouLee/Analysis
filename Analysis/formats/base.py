@@ -97,7 +97,7 @@ class FormatBase(metaclass=ABCMeta):
         """
         if not Path(path).exists():
             raise FileNotFoundError(f"{path} not found, please check again.")
-        print(path)
+        #print(path)
         self.path = path
         self.T = temperature
         self.run_type = run_type
@@ -185,12 +185,14 @@ class FormatBase(metaclass=ABCMeta):
 
     def __next__(self):
         if self._count == self.FrameNum:
-            self.f.seek(0)
             raise StopIteration
         self._count+=1
         self._get_one_frame()
 
     def __iter__(self):
+        if self.fast is True:
+            raise Exception("you should iterate coord_lt attribute in fast mode ")
+        self.f.seek(0)
         self._count = 0
         return self
 
@@ -296,49 +298,72 @@ class FormatBase(metaclass=ABCMeta):
         self.FrameNum = FrameNum
         if Cartesian:
             self.coords = coords
+        #else:
+        #    self.frac_coords = coords
         self.atom_lt = atom_lt
         self._setup_group()
 
-    def write_to_xyz(self, atom_labels: Sequence, filepath, digit=8, shift=None):
+    def write_to_xyz(self, atom_labels: Sequence, filepaths, digit=8, frame_range=None, cmt=None):
         """select the frame and wanted atoms you want to write to the xyz file.
         examples
         might with the utility of reducing digit
         ------------
-        atom_labels: [0, 1, 3] this three atoms.
+        atom_labels :: [0, 1, 3] this three atoms.
         with Analysis.XYZ(file_name) as traj:
             T = traj[200:]
             T.write_to_xyz([0, 1, 3])
         digit :: how many digit you want to have for coordinates
+        range
             
         """
+        print('writing to xyz file...')
         if isinstance(atom_labels, int):
             assert (atom_labels == self.AtomNum)
             atom_labels = np.array(range(atom_labels))
+        if frame_range is None:
+            frame_range=list(range(self.FrameNum))
+        if cmt is None:
+            cmt='\n'
     
-        with open(filepath, "w") as file:
-            if self._from_file:
-                for frame in self:
-                    file.write(f"    {str(len(atom_labels))}\n\n")
-                    for label in atom_labels:
-                        file.write(f"{self.atom_lt[label]}    ")
-                        if shift is None:
-                            coords=str(np.round(self.coords[label],digit)).strip("[] ")
-                        else:
-                            coords=self.coords[label] - shift
-                            coords=str(np.round(coords,digit)).strip("[] ")
-                        file.write(coords)
-                        file.write("\n")
-            elif self._from_stream:
-                #3d (self.FrameNum, self.AtomNum, 3)
-                for i in range(self.FrameNum):
-                    file.write(f"    {str(len(atom_labels))}\n\n")
-                    for label in atom_labels:
-                        file.write(f"{self.atom_lt[label]}    ")
-                        coord=str(self.coords[i][label]).strip("[] ").split() # ['x', 'y', 'z']
-                        for c in coord:
-                            c = '{:.8f}'.format(float(c))
-                            file.write('{:<17}'.format(c))
-                        file.write("\n")
+        for m, filepath in enumerate(filepaths):
+            fr = frame_range[m]
+            with open(filepath, "w") as file:
+                if self.fast:
+                    assert self.FrameNum >= fr[-1]
+                    for i in range(self.n_processes):
+                        line = self.coord_lt[i]
+                        #print(line.shape)
+                        BaseNr = i*line.shape[0]
+                        for j, l in enumerate(line):
+                            if j+BaseNr in fr:
+                                file.write(f"    {str(len(atom_labels))}\n")
+                                file.write(cmt)
+                                for label in atom_labels:
+                                    file.write(f"{self.atom_lt[label]}    ")
+                                    coords=str(np.round(l[label],digit)).strip("[] ")
+                                    file.write(coords)
+                                    file.write("\n")
+                elif self._from_file:
+                    for i, frame in enumerate(self):
+                        if i in fr:
+                            file.write(f"    {str(len(atom_labels))}\n")
+                            file.write(cmt)
+                            for label in atom_labels:
+                                file.write(f"{self.atom_lt[label]}    ")
+                                coords=str(np.round(self.coords[label],digit)).strip("[] ")
+                                file.write(coords)
+                                file.write("\n")
+                elif self._from_stream:
+                    #3d (self.FrameNum, self.AtomNum, 3)
+                    for i in range(self.FrameNum):
+                        file.write(f"    {str(len(atom_labels))}\n\n")
+                        for label in atom_labels:
+                            file.write(f"{self.atom_lt[label]}    ")
+                            coord=str(self.coords[i][label]).strip("[] ").split() # ['x', 'y', 'z']
+                            for c in coord:
+                                c = '{:.8f}'.format(float(c))
+                                file.write('{:<17}'.format(c))
+                            file.write("\n")
 
             #elif self._from_stream:
             #    #2d coordinates array 

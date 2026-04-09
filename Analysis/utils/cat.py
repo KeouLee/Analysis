@@ -171,6 +171,17 @@ def mean_freq(freq, signal):
     #print(np.sum(signal*freq), np.sum(signal))
     return np.sum(signal*freq) / np.sum(signal)
 
+#def cluster(parts:Sequence,threshold:float|int):
+#    lt = []
+#    for i in range(len(parts)):
+#        for j in parts[i:]:
+#            if abs(parts[i] - j) < threshold:
+#                for ss in lt:
+#                    if j in ss:
+#                lt.append([])
+#                lt[-1].append(j)
+
+
 def test():
     lt = [[0,1,2],[2,3],[4,5],[5,6],[10,11],[11,6]]
     res = cat_to_mol(lt)

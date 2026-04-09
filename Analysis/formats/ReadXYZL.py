@@ -1,7 +1,6 @@
 from .ReadXYZ import XYZ
 from .rot_analysis import _detect
 import sys
-import itertools
 from collections import defaultdict, deque
 import numpy as np
 from numpy.linalg import inv, norm
@@ -20,7 +19,7 @@ from scipy.interpolate import UnivariateSpline
 import matplotlib.pyplot as plt
 import copy
 import multiprocessing
-from itertools import chain, permutations, combinations, accumulate
+from itertools import chain, permutations, combinations, accumulate, product
 import math
 #from tqdm import tqdm
 from typing import Sequence
@@ -29,7 +28,6 @@ from typing import Sequence
 #from .fortran_diagonalization import tred2, imtql2
 
 
-__author__ = 'Ke Li'
 __all__ = ['XYZL', 'Angle', 'Radius']
 #np.set_printoptions(threshold=sys.maxsize, suppress=False)
 class XYZL(XYZ):
@@ -100,6 +98,15 @@ class XYZL(XYZ):
             self.coords = self._get_cc(self.frac_coords)
         else:
             if not fast:
+                self.frac_coords = np.matmul(self.coords, self.ilat_vec)
+            else:
+                altruism = deque(accumulate([self.coord_lt[i].shape[0] for i in range(self.n_processes)]))
+                altruism.pop()
+                altruism.appendleft(0)
+                self.coords = np.empty((self.FrameNum,self.AtomNum,3))
+                for i in range(self.n_processes):
+                    for j, coord in enumerate(self.coord_lt[i]):
+                        self.coords[altruism[i]+j]=coord
                 self.frac_coords = np.matmul(self.coords, self.ilat_vec)
 
     def _setup_lat(self,lat_vec, lat_param):
@@ -2718,6 +2725,76 @@ class XYZL(XYZ):
                     dist_bin[ir] += 1 / r / r
         dump_pkl(dump_name, dist_bin)
 
+    def _get_primitive(self, multiple):
+        lt = []
+        lim=np.array([1/multiple[0], 1/multiple[1], 1/multiple[2]])
+        for i in range(self.AtomNum):
+            if all(self.frac_coords[i]< lim):
+                lt.append(i)
+        return lt
+
+    def get_primitives(self,multiple):
+        fragmentsX = [[1/multiple[0]*i,1/multiple[0]*(i+1)] for i in range(multiple[0])]
+        fragmentsY = [[1/multiple[1]*i,1/multiple[1]*(i+1)] for i in range(multiple[1])]
+        fragmentsZ = [[1/multiple[2]*i,1/multiple[2]*(i+1)] for i in range(multiple[2])]
+        RANGE=[[x,y,z] for x in fragmentsX for y in fragmentsY for z in fragmentsZ]
+        lt = []
+        for r in RANGE:
+            lt.append([])
+            for i in range(self.AtomNum):
+                coord=self.frac_coords[i]
+                if r[0][0] < coord[0] < r[0][1] and r[1][0] < coord[1] < r[1][1] and r[2][0] < coord[2] < r[2][1]:
+                    lt[-1].append(i)
+        return lt
+
+    def get_all_neighbors(self, multiple):
+        # get atom index list of the 1st primitive cell 
+        origin=self._get_primitive(multiple)
+
+        # get frac_coords for atoms within the range of the 1st primitive cell
+        lat_vec = np.zeros((3,3))
+        lat_vec[0] = self.lat_vec[0]/multiple[0]
+        lat_vec[1] = self.lat_vec[1]/multiple[1]
+        lat_vec[2] = self.lat_vec[2]/multiple[2]
+        prim=self.frac_coords[origin]
+        prim[:,0]=prim[:,0]*multiple[0]
+        prim[:,1]=prim[:,1]*multiple[1]
+        prim[:,2]=prim[:,2]*multiple[2]
+
+        # loop over all primitive cells 
+        #points = np.zeros((multiple[0]*multiple[1]*multiple[2], len(origin), 3))
+        points = []
+        carts = list(product((0,1,-1),repeat=3))
+        tmp=np.empty(prim.shape)
+        #count = 0
+        for i in range(multiple[0]):
+            for j in range(multiple[1]):
+                for k in range(multiple[2]):
+                    tmp[:,0]=prim[:,0]+i
+                    tmp[:,1]=prim[:,1]+j
+                    tmp[:,2]=prim[:,2]+k
+                    points.append([])
+                    # build nearest-26 primitive cells around inspected cells
+                    cells = []
+                    for cart in carts: 
+                        coords=tmp+np.array(cart)
+                        cells.append(self.__class__(lat_vec=lat_vec, coords=coords, AtomNum=len(origin), 
+                            FrameNum=1, atom_lt=list(np.array(self.atom_lt)[origin]), Cartesian=False, from_stream=True))
+                    #for l, o in enumerate(origin):
+                    for o in range(len(origin)):
+                        cell1st=cells[0].coords[o] 
+                        points[-1].append([])
+                        points[-1][-1].append(cell1st)
+                        for cell in cells:
+                            #for m, site in enumerate(cell.coords):
+                            for site in cell.coords:
+                                d = np.linalg.norm(site - cell1st)
+                                if 1e-2 < d < 4.5:
+                                    points[-1][-1].append(site)
+            
+        # only work for case where inspected atoms within a primitive cell have the same Nr. of coordinated atoms
+        return np.array(points)
+
 
 
 class PlotContour:
@@ -2769,7 +2846,7 @@ def vec_to_param(lat_vec):
     for i in range(3):
         lat_param[i] = np.dot(lat_vec[i], lat_vec[i]) ** .5
 
-    comb = itertools.combinations([0,1,2],2)
+    comb = combinations([0,1,2],2)
     for c in comb:
         cos = np.dot(lat_vec[c[0]], lat_vec[c[1]]) / norm(lat_vec[c[0]]) / norm(lat_vec[c[1]]) 
         lat_param[-sum(c)] = np.rad2deg(np.arccos(cos))

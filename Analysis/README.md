@@ -1,9 +1,9 @@
 ## how to use this module ::Analysis::
 
 ```python
-	import Analysis
+	from Analysis import XYZ
 	#for xyz file
-	with Analysis.XYZ("path/sometraj.xyz") as traj:
+	with XYZ("path/sometraj.xyz") as traj:
 	    # play with attributes 
         traj.atom_lt # get atom list in this traj
 	    traj.AtomNum # get atom number in this traj

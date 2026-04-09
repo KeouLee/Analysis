@@ -109,10 +109,18 @@ def get_ts_and_df(inp):
     #print(ts, df)
     return ts, df
 
+def get_temperature_cp2k(inp):
+    with open(inp) as f:
+        for line in f:
+            if (mo:=re.match('\s+temperature\s+([\.\dE\+]+)', line, re.IGNORECASE)):
+                return mo.group(1)
+
+
+
 
 if __name__ == "__main__":
-    def test():
-        #get_lattice_vector("/home/keli/solid_state/battery/TRAJ/MD_600K_normal/phase1/Na11Sn2PS12_normal.inp")
-        #get_lattice_vector_cp2k("/home/keli/solid_state/battery/TRAJ/BOROHYDRIDE/MD_450K_normal/phase1/LiBH4_HT_normal.inp")
-        get_ts_and_df('/home/keli/solid_state/battery/MLP/LiBH4/Run/TRAJ/unconstrained/550K/run.inp')
-    test()
+    #get_lattice_vector("/home/keli/solid_state/battery/TRAJ/MD_600K_normal/phase1/Na11Sn2PS12_normal.inp")
+    #get_lattice_vector_cp2k("/home/keli/solid_state/battery/TRAJ/BOROHYDRIDE/MD_450K_normal/phase1/LiBH4_HT_normal.inp")
+    #get_ts_and_df('/home/keli/solid_state/battery/MLP/LiBH4/Run/TRAJ/unconstrained/550K/run.inp')
+    #res = get_temperature_cp2k('/home/keli/solid_state/battery/MLP/LiBH4/Run/TRAJ/unconstrained/550K/run.inp')
+    pass

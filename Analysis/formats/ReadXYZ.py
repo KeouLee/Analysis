@@ -117,7 +117,7 @@ class XYZ(FormatBase):
         return np.linalg.norm(drifts, axis=1)
 
 
-    def _load(self, fn, start, n_processes):
+    def _load(self, fn, start=0, n_processes=1):
         """fast load large trajectory and calculate the RDF of each chunk as they are only structural analysis.
            we directly trim the trajectory (discarding the pre-equil and retaining the equilbrium frame only)
            as not matter structural or dynamical are calculated from equilibirated frames only.

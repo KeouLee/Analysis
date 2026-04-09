@@ -5,7 +5,7 @@ import importlib
 from pathlib import Path
 from inspect import getmembers, isclass, isfunction
 
-__all__ = ['XYZ', 'XTC', 'XYZL', 'POSCAR', 'XDATCAR', 'get_lattice_vector_cp2k', 'OUTCAR', 'LAMMPS', 'Rot', 'get_ts_and_df', 'CIF', 'MOL2', 'PDB']
+__all__ = ['XYZ', 'XTC', 'XYZL', 'POSCAR', 'XDATCAR', 'get_lattice_vector_cp2k', 'OUTCAR', 'LAMMPS', 'Rot', 'get_ts_and_df', 'CIF', 'MOL2', 'PDB', 'DCD', 'get_temperature_cp2k']
 NOT_LOADABLE = ("__init__.py", "base.py", "__pycache__", "test.py", )#"func_space.py", "cp2k_space.py")
 PACKAGE_BASE = "Analysis.formats"
 TO_LOAD = ("Read*py", "*space.py", "rot_analysis.py")
