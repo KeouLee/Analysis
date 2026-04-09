@@ -1,0 +1,27 @@
+# V_Na_-2
+ISPIN = 2
+NUPDOWN = 1
+
+ADDGRID = .TRUE.
+LREAL  = .FALSE.
+ENCUT  =  520
+ PREC   =  Accurate   
+LWAVE  = .FALSE.     
+LCHARG = .FALSE. 
+ 
+ISMEAR =  0        
+SIGMA  =  0.05    
+NELM   =  64     
+NELMIN =  4     
+EDIFF  =  1E-07
+ 
+NSW    =  100
+IBRION =  1
+POTIM = 0.05
+NPAR = 2
+KPAR = 15
+#SMASS = 2
+ISIF   =  2
+EDIFFG = -0.01
+ISYM =  0         
+NELECT =913
