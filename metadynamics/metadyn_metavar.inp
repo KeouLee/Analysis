@@ -1,0 +1,1209 @@
+      &METAVAR
+        SCALE 10000
+        COLVAR 3
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 4
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 5
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 6
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 7
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 8
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 9
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 10
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 11
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 12
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 13
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 14
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 15
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 16
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 17
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 18
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 19
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 20
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 21
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 22
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 23
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 24
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 25
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 26
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 27
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 28
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 29
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 30
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 31
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 32
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 33
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 34
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 35
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 36
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 37
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 38
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 39
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 40
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 41
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 42
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 43
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 44
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 45
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 46
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 47
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 48
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 49
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 50
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 51
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 52
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 53
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 54
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 55
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 56
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 57
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 58
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 59
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 60
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 61
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 62
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 63
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 64
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 65
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 66
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 67
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 68
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 69
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 70
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 71
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 72
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 73
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 74
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 75
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 76
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 77
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 78
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 79
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 80
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 81
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 82
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 83
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 84
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 85
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 86
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 87
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 88
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 89
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 90
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 91
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 92
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 93
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 94
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
+      &METAVAR
+        SCALE 10000
+        COLVAR 95
+        &WALL
+          POSITION 140.0
+          TYPE QUARTIC
+          &QUARTIC
+            DIRECTION WALL_PLUS
+            K 0.02
+          &END QUARTIC
+        &END WALL
+      &END METAVAR
+
