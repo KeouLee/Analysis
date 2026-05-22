@@ -1,3 +1,6 @@
+"""
+Plot the collective variable as a function of simulation time.
+"""
 import matplotlib.pyplot as plt
 import numpy as np
 
