@@ -1,3 +1,6 @@
+"""
+Compute and plot the free energy surface from metadynamics HILLS data.
+"""
 import numpy as np
 import matplotlib.pyplot as plt
 
