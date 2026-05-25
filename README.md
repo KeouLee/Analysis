@@ -13,3 +13,5 @@ The VASP input files for point defect calculations for Na3OBH4, using a sodium v
 
 ## metadynamics
 The CP2K input files for well-tempered metadynamics simulations of LiBH4, together with the post-processing scripts.
+
+Repo tested with Python 3.10.
