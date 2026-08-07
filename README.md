@@ -1,6 +1,12 @@
 ## rotational_const.zip
 Modified CP2K source code implementing the rotational constraint, developed by [@jtyang-chem](https://github.com/jtyang-chem) and reproduced here for convenience. For details, see https://doi.org/10.1063/5.0216913.
 
+## MD_init_final_inp
+MD input file and initial/final configurations.
+
+## optimized_geometry
+optimized_geometry in POSCAR format.
+
 ## Analysis
 Code reads MD trajectories in DCD (CP2K) or XYZ format and then calculates the free energy curve/surface, reorientation
 frequency, and the time-correlation function of angular velocity, etc.
